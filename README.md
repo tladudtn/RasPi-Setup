@@ -7,7 +7,7 @@
 0. 초기설정
 1. 업데이트
 2. 폰트/입력기 설치
-3. 해상도 설정
+3. IP 변경
 4. 기타설정
 
 ### 0. 초기설정
@@ -41,9 +41,14 @@ apt-get install ibus ibus-hangul
 ## 위 2개 전부 설치후 재부팅
 ```
 
-### 3. 해상도 설정
+### 3. IP 변경
 
-SOON
+```bash
+nano /etc/dhcpcd.conf # interface 수정할필요 x
+sudo systemctl restart dhcpcd
+```
+
+
 
 ### 4. 기타 설정
 
@@ -54,11 +59,4 @@ Raspberry Pi Configuration -> Performance -> GPU men(기본 78mb)
 #### 4.2 SSH / VNC 활성화
 
 Raspberry Pi Configuration -> Interfaces -> SSH/VNC enable(설정은 알아서)
-
-### 4.3 IP 변경
-
-```bash
-nano /etc/dhcpcd.conf # interface 수정할필요 x
-sudo systemctl restart dhcpcd
-```
 
